@@ -62,11 +62,15 @@ class UserList(MethodView):
 
     def get(self):
 
-        users = User.query
+        users = User.query.all()
+        emails = []
+        for x in users:
+            emails.append(x.email)
+        print("emails", emails)
 
         responseObject = {
             'status':'success',
-            'message':'Request successful. Send a POST command for dat list doe'
+            'message': emails
         }
         return make_response(jsonify(responseObject)), 201
 
