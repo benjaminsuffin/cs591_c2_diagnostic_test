@@ -66,7 +66,7 @@ class UserList(MethodView):
         emails = []
         for x in users:
             emails.append(x.email)
-        print("emails", emails)
+
 
         responseObject = {
             'status':'success',
