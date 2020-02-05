@@ -7,6 +7,7 @@ from project.server.models import User
 from project.tests.base import BaseTestCase
 
 
+
 class TestAuthBlueprint(BaseTestCase):
     def test_registration(self):
 	    """ Test for user registration """
